@@ -1,37 +1,51 @@
-import './../assets/CSS/home.css'
-import Navbar from './Components/navbar'
-import image from '../assets/Image/student.png'
-import 'font-awesome/css/font-awesome.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect } from "react";
+import "./../assets/CSS/home.css";
+import Navbar from "./Components/navbar";
+import "font-awesome/css/font-awesome.min.css";
+import Typed from "typed.js";
+import Featured from "./Components/featured";
 
-const App = ()=>{
-  return  (
+const App = () => {
+  useEffect(() => {
+    // type js for doing animation
+    const typed = new Typed(".typing", {
+      strings: [
+        "bringing students and teachers closer",
+        "you with homework",
+        "completing tasks efficiently",
+        "collaborating with each other",
+      ],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy(); // cleanup when component unmounts
+    };
+  }, []);
+
+  return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className="content">
         <div className="leftside">
           <div className="topside">
-            <h1 className="welcome">Welcome to</h1>
-            <h1 className="gurushala">Gurushala</h1>
+            <h1 className="welcome">Welcome to Gurushala</h1>
             <h1 className="slogan">
-              <FontAwesomeIcon icon={faQuoteLeft} className='quotes' />
-              An application for learners
-              <FontAwesomeIcon icon={faQuoteRight} className='quotes' />
+              We help <span className="typing"></span>
             </h1>
+            <div className="bottomside">
+              <a href="#" className="highclickables">
+                Join us
+              </a>
+            </div>
           </div>
-          <div className="bottomside">
-            <a href="" className="highclickables">Sign up</a>
-            <a href="" className="highclickables">Sign In</a>
-          </div>
-        </div>
-        <div className="rightside">
-          <img src={image} className='studentimg'/>
         </div>
       </div>
+      <Featured/>
     </>
   );
-}
+};
 
-
-export default App
+export default App;

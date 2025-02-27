@@ -1,0 +1,105 @@
+:root {
+    --primary: #FF6B35;
+    --secondary: #004E89;
+    --accent: #00A8E8;
+    --light: #FFFFFF;
+    --dark: #333333;
+    --background: #F4F7F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: var(--light);
+    padding: 140px 0 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section {
+    padding: 80px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+.instructor-info {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.instructor-info h3 {
+    font-size: 1.8rem;
+    color: var(--secondary);
+}
+
+.instructor-info h4 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 12px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 35px;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary);
+}
