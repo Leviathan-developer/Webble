@@ -3,7 +3,8 @@ import "./../assets/CSS/home.css";
 import Navbar from "./Components/navbar";
 import "font-awesome/css/font-awesome.min.css";
 import Typed from "typed.js";
-import Featured from "./Components/featured";
+import About from "./Components/about";
+import Services from "./Components/service"
 
 const App = () => {
   useEffect(() => {
@@ -36,14 +37,15 @@ const App = () => {
               We help <span className="typing"></span>
             </h1>
             <div className="bottomside">
-              <a href="#" className="highclickables">
+              <a href="/login" className="highclickables">
                 Join us
               </a>
             </div>
           </div>
         </div>
       </div>
-      <Featured/>
+      <Services/>
+      <About/>
     </>
   );
 };

@@ -32,10 +32,10 @@ function Navbar() {
               <a className="nav-link" href="#edafa">About</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Services</a>
+              <a className="nav-link" href="#service">Services</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
+              <a className="nav-link" href="/contactus">Contact</a>
             </li>
           </ul>
         </div>

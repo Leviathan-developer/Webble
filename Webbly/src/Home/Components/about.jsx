@@ -1,6 +1,5 @@
 import React from 'react';
-import './about.css'; // Link to your CSS file (you can rename it or style directly in the component)
-
+import './about.css';
 const AboutUs = () => {
     return (
         <div>
